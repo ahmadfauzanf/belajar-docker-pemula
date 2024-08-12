@@ -1,4 +1,4 @@
-FROM node:16-alpine
+FROM node:18
 
 ENV VUE_APP_API_URL=http://api.belajar-docker.com
 
