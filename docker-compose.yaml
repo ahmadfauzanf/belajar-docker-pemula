@@ -12,7 +12,8 @@ services:
         volumes:
             - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
     todo-backend:
-        image: ahmdy/todo-backend:v1
+    # image: ahmdy/todo-backend:v1
+        build: ./backend
         ports:
             - 8080:8080
       
@@ -26,7 +27,8 @@ services:
         depends_on:
             - todo-postgres
     todo-frontend:
-        image: ahmdy/todo-frontend:v2
+      #  image: ahmdy/todo-frontend:v2
+        build: ./frontend
         ports:
           - 8081:8080
        
